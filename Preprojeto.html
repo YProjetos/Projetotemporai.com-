@@ -1,81 +1,348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <style>
-        body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Simples</title>
+ <style>
+  /* Estilos Gerais */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
- 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 40px 20px;
     text-align: center;
 }
- 
-header nav ul {
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.main-header p {
+    margin: 5px 0 0;
+}
+
+/* Navegação */
+.main-nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.main-nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
- 
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
- 
-header nav ul li a {
-    color: white;
+
+.main-nav a:hover {
+    background-color: #555;
+}
+
+/* Conteúdo Principal e Barra Lateral */
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.widget h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Posts do Blog */
+.blog-post {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+
+/* Oculta o conteúdo extra por padrão */
+.conteudo-extra {
+    display: none;
+}
+
+/* Exibe o conteúdo extra quando o link é clicado e a âncora está na URL */
+.conteudo-extra:target {
+    display: block;
+}
+
+/* Esconde o link "Leia Mais" quando o conteúdo está visível */
+.conteudo-card a.toggle-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
     text-decoration: none;
     font-weight: bold;
 }
- 
-main {
+
+.conteudo-extra:target ~ a.toggle-link {
+    display: none;
+}
+
+/* Estilo do link "Esconder" */
+.conteudo-extra a.toggle-link {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
     padding: 20px;
 }
- 
-section {
-    margin-bottom: 20px;
-}
- 
-footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
- 
-@media (max-width: 600px) {
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
     }
 }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:25px;
+}
+p2{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: #007bff;
+}
+
+    
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+}
+ </style>
 </head>
 <body>
-     <div class="sidebar">
-        <ul class="main-menu">
-            <li><a href="#home">Início</a></li>
-            <li class="submenu">
-                <a href="#services">Serviços</a>
-                <ul class="sub-menu">
-                    <li><a href="#web-design">Web Design</a></li>
-                    <li><a href="#seo">SEO</a></li>
-                    <li><a href="#marketing">Marketing</a></li>
-                </ul>
-            </li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#contact">Contato</a></li>
+
+    <header class="main-header">
+        <div class="header-content">
+            
+            <h1 >  Geeks News </h1>
+            <p>Notcia Animes Mangas Filme series curiosida da Cultura Pop  </p>        </p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Filmes & Series </a></li>
+            <li><a href="#"> Animes & Mangas   </a></li>
+            <li><a href="#">Contato</a></li>
         </ul>
+    </nav>
+
+    <div class="container">
+        <main class="main-content">
+            <article class="blog-post">
+                <h2>Por que Aime Se Torno Fenômenos do no Mercado Brasileiro <br> <br></h2>
+                <p class="post-meta">Publicado em 25 de Setembro, 2025 </p>
+                <img src="Imagens\confira-agora-os-25-melhores-animes-que-ja-foram-criados-1.jpg" alt="Imagem do Post" class="post-image">
+                               
+                <div class="conteudo-card">
+    <div class="conteudo-principal">
+        <p>
+             Não de Hoje Que Brasil Maior Consumidor animes e mangá atualmente o Brasil é atualmente o  3º consumidor. Animes e mangá e outros Nichos conhecidos Como cultura Geek   será Próximo Tema   blog nesse tema Alguns fatores pode ter causado esse fenômeno   aqui no Brasil como Dublagens   que será Falado nesse tema   o país  é atualmente o terceiro maior mercado anime atual assim confirmando o   3° posição do país como um dos principais mercados globais para a indústria de animes e mangás perdendo apenas para japonesa.<br> <br>
+                Faz parte cultura atualmente no Brasil relação comercial entre o Brasil e Japão que esse ano chegar a comemorar os seus  130 anos     de Existência que no Brasil ele tem Várias Misturas de etnia   Brasil e japão é uma delas onde se tenha Vários Eventos no Brasil de Animes desse   Anime friends e CCXP      que são As principais eventos Atualmente no Brasil
+
+O Brasil é atualmente o terceiro maior mercado de animais fora do Japão e da China, ficando atrás apenas dos Estados Unidos e da Índia.<br> <br>
+  Essa Paixão pelo Anime aqui no Brasil começou lá nos anos  90  onde começou primeiros passo para essa febre que estamos vendo atualmente 
+    essa Febre Começou das TV abertas   onde começou  surgir o animes   Cavaleiros Zodíacos, Dragon Ball, e o Naruto entre anos  90 a  2000 Dévio as icônicas Dublagens que Impulsional onde virou Febre que estamos Vendo Atualmente
+     na TV manchete   foi um grande Sucesso   depois foi várias programas de Tv 
+ Anos  2000  onde os desenhos eram Populares   na tv.  <br> <br>
+
+Isso será outra história   e os animes está começando fica a se popularizar nessa época     Pessoas que Gostava desse de Animes e mangás são chamados de Otakus  
+   que são Fãs de Animes e mangás foi alvo de estereótipos como fama de   como adolescente recluso e socialmente desajeitado  
+    atualmente uma pesquisa   mais Recente No Mercado    Pela Matéria do Site CCXP Criou uma Pesquisa   na, 12° edição do evento que Chamado de Geek Power Realizada   em  2024  Apresenta na CCXP realizada em  2024
+     7 Mil participante em todo Brasil revela se que  57% do público Geek é Feminino a Matéria Também Revela que   55% têm entre  22 a  39 Anos 
+      que Coloca Faixa etária <br> <br>
+
+       
+
+        </p>
     </div>
+
+    <a href="#leia-mais-conteudo" class="toggle-link">Leia Mais</a>
+
+    <div class="conteudo-extra" id="leia-mais-conteudo">
+        <p> 
+ 
+Geração Milenar conhecida Como Geração Y nasceram entre   81 a  96     dependo Gerações em termos de comércios 74,4% dos entrevistados  
+        são pertence às classes B e C e Pesquisa Foi Mais Fundo Ainda a paixão pelos Animes 
+          se Encontra   nos régios Sudeste e nordeste que Aborda  67,6% Público    você Pode Ver Matéria completa lá No Final Matéria 
+
+
+           Isso mostra que a base de fãs de animes no Brasil é um mercado consumidor maduro e nicho Lucrativo, A meu ver, que muito Influenciado    Como Vocês podem Ver Na pesquisa  Geek Power <br> <br>
+             Longe de ser um nicho de adolescentes, o público é composto por adultos jovens em sua fase de maior poder aquisitivo, o que se traduz em um impacto econômico significativo no consumo de produtos Canistas Copo Chaveiros, Canecas ingressos para eventos Com Própria CCXP Animes Fredes  Atemos o   cinema   que outro ponto que animes que estão chegando atualmente 
+               que outro Ponto ser explicado   assinaturas de streaming. <br> <br>
+
+                O perfil para o   público geek  e   otaku é o pilar que sustenta e   crescimento a cada ano em mercado de animes no país. Que Não é À toa que 3 Maior Consumidor de Animes Manga  
+  Essa   pesquisa Geek Power, ela revela um consumo e seu público Alvo para   entre a idade e as Gerações Z nascidos entre 97 a  2010  e Geração 
+    Y Nascido em   81 a  96   que sua preferência por animes e mangás:   quanto mais jovem e  maior a preferência por esse tipo de conteúdo.
+
+    o Como Vocês Podem Ver e Acompanha Nesse Matéria que o Brasil    e 3 Maior Mercado animes e mangas atualmente
+     no Brasil devido alguns fatores que manter o Brasil  3°  no Mercado maior mercado Anime e Mangás  <br> <br>
+
+      Primeiro Ponto Como Já Vimos Na Matéria o público Geek   que Acompanham
+       os Animes   90  atualmente   Com Gerações Z e Y Como Você Podem Ver Na Pesquisa  
+          Geek Power onde  se tenha Mais Consumo entre Gerações  <br> <br>
+   
+ Segundo Pontos: A evolução da migração da Mídia para plataformas digitais 
+ que Foi Salto    impulsionaram o Brasil Começando a era dos Extremos
+  Com Netflix Foi Pioneira   do Mercado em  2010, depois Veio outras plataformas  
+    para uma posição de destaque no cenário global onde Você Pode ver
+     Filmes Série desenhos e os animes onde   Impulsionou   a procura de animes mangas 
+       até os dia atuais onde   a demanda da Dublagem devido Ao Streaming  no Brasil <br> <br>
+
+        o Terceiro Ponto:   foi a famosa Dublagem Animes no   brasileira   que eram Muito cm Para Filmes Serie a dublagem de animes se início entre   anos  80 e  90
+          devido um boom   na época dos Cavaleiros Zodíacos na TV   um dos pioneiros que consagrou e Impulsionou a Dublagens Brasileiras<br> <br>
+           dos animes atualmente,    considerado pela qualidade   das Dublagens
+                   atualmente adorado Pelos Fãs    A dublagem brasileira foi fundamental para a popularização dessas produções, com estúdios
+                    como a Gota Mágica sendo responsáveis por clássicos como Cavaleiros do Zodíaco e Yu Yu Hakusho.<br> <br>
+                    a época demonstraram um grande desejo por animes dublados, o que ajudou a consolidar o mercado. De Anime no Brasil A dublagem atualmente tem um papel fundamental na conexão entre o público brasileiro e os animes. Que reconhecida no país através de sua qualidade 
+   e o estúdio de dublagens   <br> <br>
+
+   Quanto Ponto: Graças os Canais de TV: A exibição de animes em programas infantis de canais abertos Como Pokémon na redeTv.
+    como Programa TV Kids   SBT Bom dia Cia onde apresento o um dos nairo Anima na Atualidade com Naruto e Famosos TV Globinho pela rede Globo
+     Com Dragon Ball Yu Gi Oh! Digimo   entre outra que   também contribuiu para o sucesso, para Os Animes no Brasil  2000  atualmente <br> <br>
+
+O Brasil se destaca globalmente no consumo de animes devido ao streaming.
+ Que um dos Dicadores Maior Consumo da Galera Geek e Otaku A presença de animes em plataformas de streaming convencionais, como a Netflix, Crunchyroll maiores No Mercado De Anime onde tem infinidade de Animes são serviços consolidação de serviços especializados em Animes
+    fizeram com que títulos como   One Piece, Demon Slayer e  Naruto   e Entre Outros   se tornassem mais a    essíveis ao  público muito mais amplo.
+     Devido o conteúdo disponível permite que novos e antigos fãs encontrem produções que se alinham a seus gostos, desde ação intensa a comédias românticas e outras categorias.
+     
+     <br> <br>  
+
+
+     O consumo de animes no Brasil é impulsionado outro Tipo de Mercado Nas Plataformas    digital   como YouTube, TikTok, Instagram e outras redes sócias que Viro engajamento assim Criando A cultura Pop Onde se Fala de várias Assunto Inclusive de Animes e Mangás onde   Centenas de Canais   Anime Mangás Filmes Outro na Cultura Nerd   onde o engajamento do público. Desde Vídeo,    YouTube   mems e Outros Onde   marketing Mais Trabalha Atualmente    <br> <br>  
+
+     O engajamento em redes sociais cria um efeito dominó onde a discussão sobre um episódio ou personagem se torna viral, levando mais pessoas a buscarem e assistirem ao anime, filmes, séries e outros da cultura Pop. Isso Ajuda marketing Para A Empresa  de streaming se Povo está Gotas tando do Produto Ou Não  Para os fãs, Animes   que Uma comunidade virtual Onde se Junta Número Pessoa   Pode virar Virtual Para   físico, onde é possível trocar informações, fazer amigos e, em muitos casos, levar essas relações para o mundo real, organizando
+      encontros em eventos ou em outros locais.   e assim   validando sua paixão e estimulando a descoberta constante de novos conteúdos.    <br> <br>  
+
+      O futuro Para Anime é Incerto mercados Animes E Mangás    no Brasil a cada dia está Crescendo demonstrando Força brigona e Iguala Com Outros Títulos Até Mesmo No Cinema devido combinações     fatores equacionado Para Aumento Animes devido Fatores que Foi Falado Na Matérias    
+
+        </p>
+
+<p2>
+essa Matéria Foi Escrita foi     Mesclando   Com Ai Google Gemini
+         e  Onde Foi Tirada As Fontes : angelotti.wordpress.com , meups.com.br , jovemnerd.com.br, ccxp.com.br,
+adnews.com.br , abcdoabc.com.br , omelete.com.br 
+</p2>
+   <p>
+
+
+   </p>
+
+   
+
+
+        <a href="#Feixa " class="toggle-link">Feixar       
+        </a>
+    </div>
+</div>
+                
+            </article>
+
+            <article class="blog-post">
+                <h2>Outro Título de Post</h2>
+                <p class="post-meta">Publicado em 20 de Setembro, 2025 | por Maria Santos</p>
+                <p>Este é um exemplo de um post sem imagem. A flexibilidade do CSS permite que o layout se adapte para diferentes tipos de conteúdo.</p>
+                <a href="#" class="read-more">Leia Mais</a>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Sobre Projeto    </h3>
+                <p>Olá! Caro Leitores  esse Um Projeto de teste
+                     Chamado Geek News Onde Encontra varias Notica
+                      Animes Mangas  Filmes Serie Outros  test de Mostraçao 
+                      de  que eu Sei Fazer  Pessoa Que Caramente  que  
+                      deixa Um  Comentario  em yagosbelmonte@gmail.com
+                    
+                   </p>
+            </div>
+            <div class="widget">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Desenvolvimento Web</a></li>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Contatos  </a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Meu Blog Simples. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
